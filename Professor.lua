@@ -118,7 +118,7 @@ function Professor.Race:new(id, name, icon, raceItemID)
 						self.totalSolves = self.totalSolves + completionCount
 					end
 					if self.artifacts[icon] and self.artifacts[icon].pristineId then
-						self.artifacts[icon].pristineSolved = IsQuestFlaggedCompleted(self.artifacts[icon].pristineId);
+						self.artifacts[icon].pristineSolved = C_QuestLog.IsQuestFlaggedCompleted(self.artifacts[icon].pristineId);
 						if self.artifacts[icon].pristineSolved then
 							self.completedPristine = self.completedPristine + 1
 						end
